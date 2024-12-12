@@ -1,10 +1,10 @@
 import telebot
 import requests
 from telebot import types
-#for more join @JakanakaStore & @JakanakaStore
+#for more join @AzR_mathods & @AzR_projects
 # Your bot token
 API_TOKEN = '7940424789:AAG1NzKI_OxH3zVW0GZa2hN5JQrKRlun2Eo'
-CHANNEL_USERNAME = '@JakanakaStore'  # Replace with your channel username
+CHANNEL_USERNAME = '@AzR_projects'  # Replace with your channel username
 bot = telebot.TeleBot(API_TOKEN)
 
 def is_user_member(chat_id):
@@ -18,7 +18,7 @@ def is_user_member(chat_id):
 @bot.message_handler(commands=['start'])
 def start_command(message):
     if is_user_member(message.chat.id):
-                bot.send_message(message.chat.id, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 JakanakaStore 𝘄𝗲𝗯𝘀𝗶𝘁𝗲 𝗰𝗹𝗼𝗻𝗲𝗿 𝗕𝗢𝗧 𝗜'𝗺 𝗰𝗹𝗼𝗻𝗲 𝗮𝗻𝘆 𝘄𝗲𝗯𝘀𝗶𝘁𝗲 𝘀𝗼𝘂𝗿𝗰𝗲 𝗰𝗼𝗱𝗲       𝗦𝗘𝗡𝗗 𝗠𝗘 𝗔𝗡𝗬 𝗪𝗘𝗕𝗦𝗜𝗧𝗘 𝗟𝗜𝗡𝗞       𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @JakanakaStore")
+                bot.send_message(message.chat.id, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗫 𝘄𝗲𝗯𝘀𝗶𝘁𝗲 𝗰𝗹𝗼𝗻𝗲𝗿 𝗕𝗢𝗧 𝗜'𝗺 𝗰𝗹𝗼𝗻𝗲 𝗮𝗻𝘆 𝘄𝗲𝗯𝘀𝗶𝘁𝗲 𝘀𝗼𝘂𝗿𝗰𝗲 𝗰𝗼𝗱𝗲       𝗦𝗘𝗡𝗗 𝗠𝗘 𝗔𝗡𝗬 𝗪𝗘𝗕𝗦𝗜𝗧𝗘 𝗟𝗜𝗡𝗞       𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @AzRdev AzR080")
     else:
         bot.send_message(message.chat.id, f"Please join {CHANNEL_USERNAME} to use this bot.")
 
@@ -37,16 +37,16 @@ def fetch_website_html(message):
         html_content = response.text
 
         
-        file_name = 'JakanakaStorewebsite.html'
+        file_name = 'Xwebsite.html'
         with open(file_name, 'w', encoding='utf-8') as file:
             file.write(html_content)
 
         with open(file_name, 'rb') as file:
-            bot.send_document(message.chat.id, file, caption="Yᴏᴜʀ ᴡᴇʙsɪᴛᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ sᴜᴄᴄᴇssғᴜʟʟʏ Fᴀᴛᴄʜ ʙʏ @JakanakaStorewebsite_bot.")
+            bot.send_document(message.chat.id, file, caption="Yᴏᴜʀ ᴡᴇʙsɪᴛᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ sᴜᴄᴄᴇssғᴜʟʟʏ Fᴀᴛᴄʜ ʙʏ @Xwebsite_bot.")
             
     except requests.RequestException as e:
         bot.send_message(message.chat.id, f"Error fetching the website: {e}")
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-    # for more @JakanakaStore
+    # for more @AzR_mathods
